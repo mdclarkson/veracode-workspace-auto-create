@@ -2,3 +2,4 @@ requests>=2.24.0
 lxml
 veracode-api-py>=0.9.4
 anticrlf>=1.2
+pygments>=2.15.0 # not directly required, pinned by Snyk to avoid a vulnerability
