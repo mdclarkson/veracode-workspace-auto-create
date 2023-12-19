@@ -92,8 +92,7 @@ def get_project_count(workspace):
     return workspace.get('projects_count',0)
 
 def delete_workspace(workspace):
-    projects = get_project_count(workspace)
-    if projects == 0:
+    if (projects := get_project_count(workspace)) == 0:
         log.info("Deleting workspace {} (ID {})".format(workspace['name'],workspace['id']))
         vapi().delete_workspace(workspace['id'])
         return 1
